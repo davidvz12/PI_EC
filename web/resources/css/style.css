@@ -1,0 +1,32 @@
+
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+.containerCards{
+    margin: auto;
+	width:70%;
+	height:220px;
+	background-color:#F7F7F7;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+    padding-bottom: 0;
+}
+.box{
+	width:170px;
+	height:210px;
+	background-color:transparent;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin: 10px 0px;
+    margin-top: 10px;
+}
+

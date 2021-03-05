@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="resources/css/estil.css"></link>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+           rel="stylesheet"></link>
+    </h:head>
+    <h:body style=" background-color: #F7F7F7;"> 
+        <div class="nav_header" >
+            <div class="nav_header_logo">
+                <div>
+                    <span class="material-icons icon_logo" >shopping_cart</span>
+                </div>
+                <div>
+                    <t3 style="font-weight: 600; color: #707070">LOGO</t3>
+                </div>
+
+            </div>
+            <div class="nav_header_busqueda_princ">
+                <div class="nav_header_busqueda">
+                    <input class="nav_header_busq_text" type="text" placeholder="Buscar.."/>
+                    <span class="material-icons nav_header_busq_icon">search</span>
+                </div>
+                <div class="nav_header_busq_cart_cont">
+                    <p class="item_num_cart">9+</p>
+                    <a href="#" id="Add2cart"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">shopping_cart</i>
+                    </a>
+
+                    <label for="Add2cart" class="nav_header_busq_cart_cont_lbl">Mi carrito</label>
+                </div>
+
+            </div>
+
+            <div class="nav_header_submenu">
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_home"><i class="material-icons nav_header_busq_cart_cont_icon selected_item" style="font-size: 25px;">home</i>
+                    </a>
+                    <label for="nav_head_prim_itm_home" class="nav_header_busq_cart_cont_lbl selected_item">Inicio</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">favorite</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Favoritos</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">style</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Mis compras</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">perm_identity</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Usuario</label>
+                </div>
+            </div>
+
+        </div>
+        
+        
+        <div class="prinplbRes">   
+            <div class="prinplbRes_sec">
+                <div class="prinplbRes_tit">
+                    <div class="prinplbRes_tit_ci"><span class="material-icons">person_add</span></div>
+                    <div class="prinplbRes_tit_cont">MIS PEDIDOS</div>
+                </div>
+
+
+
+
+
+                <div class="tabs">
+                    <div class="tab-header">
+                        <div class="divtab-header headerActive" style="display: flex; align-items: center;">
+                            <span class="material-icons" style=" margin-right: 5px; margin-left: 55px;">
+                                pending_actions
+                            </span> PENDIENTES
+                        </div>
+                        <div class="divtab-header" style="display: flex; align-items: center;">
+                            <span class="material-icons" style=" margin-right: 5px; margin-left: 55px;">
+                                library_add_check
+                            </span>ATENDIDAS
+                        </div>
+
+                    </div>
+                    <div class="tab-indicator"></div>
+                    <div class="tab-body">
+                        <div class="divTab bodyActive">
+                            <div class="contcardsPedits">
+                                <div class="cards_min2">
+
+                                    <img src="img/arroz_con_menestra.jpg"  class="cards_min_img2" alt="" />
+
+                                    <div style="width: 210px;">                  
+                                        <p class="cards_min_nombre2">Arroz con menestra</p>
+
+                                        <div >
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">person</i>
+                                                <p class="card_prod_dest_texSec22">Cristhian briones</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">place</i>
+                                                <p class="card_prod_dest_texSec22">Esmeraldas</p>
+                                            </div>
+                                        </div>
+                                        <div class="concardsPeditsSec" style="width: 100%; ">
+                                            <div class="concardsPeditsSec" style="margin-right: 40px;">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                                <p class="card_prod_dest_texSec22">22:20</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">calendar_today</i>
+                                                <p class="card_prod_dest_texSec22">03/09/2020</p>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%;display: flex; justify-items: flex-end;">
+                                            <button class="cards_min_btn" style="width: 105px; margin: auto; margin-top: 8px; padding: 3px;"><i class="material-icons " style="font-size: 15px;color: #ffff; margin-right: 5px; margin-left: 5px; ">send</i>Entregar</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cards_min2">
+
+                                    <img src="img/arroz_marinero.jpg"  class="cards_min_img2" alt="" />
+
+                                    <div style="width: 210px;">                  
+                                        <p class="cards_min_nombre2">Arroz marinero</p>
+
+                                        <div >
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">person</i>
+                                                <p class="card_prod_dest_texSec22">Cristhian briones</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">place</i>
+                                                <p class="card_prod_dest_texSec22">Esmeraldas</p>
+                                            </div>
+                                        </div>
+                                        <div class="concardsPeditsSec" style="width: 100%; ">
+                                            <div class="concardsPeditsSec" style="margin-right: 40px;">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                                <p class="card_prod_dest_texSec22">22:20</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">calendar_today</i>
+                                                <p class="card_prod_dest_texSec22">03/09/2020</p>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%;display: flex; justify-items: flex-end;">
+                                            <button class="cards_min_btn" style="width: 105px; margin: auto; margin-top: 8px; padding: 3px;"><i class="material-icons " style="font-size: 15px;color: #ffff; margin-right: 5px; margin-left: 5px; ">send</i>Entregar</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="cards_min2">
+
+                                    <img src="img/carne_apanada.jpg"  class="cards_min_img2" alt="" />
+
+                                    <div style="width: 210px;">                  
+                                        <p class="cards_min_nombre2">Carne apanada</p>
+
+                                        <div >
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">person</i>
+                                                <p class="card_prod_dest_texSec22">Cristhian briones</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">place</i>
+                                                <p class="card_prod_dest_texSec22">Esmeraldas</p>
+                                            </div>
+                                        </div>
+                                        <div class="concardsPeditsSec" style="width: 100%; ">
+                                            <div class="concardsPeditsSec" style="margin-right: 40px;">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                                <p class="card_prod_dest_texSec22">22:20</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">calendar_today</i>
+                                                <p class="card_prod_dest_texSec22">03/09/2020</p>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%;display: flex; justify-items: flex-end;">
+                                            <button class="cards_min_btn" style="width: 105px; margin: auto; margin-top: 8px; padding: 3px;"><i class="material-icons " style="font-size: 15px;color: #ffff; margin-right: 5px; margin-left: 5px; ">send</i>Entregar</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="cards_min2">
+
+                                    <img src="img/chifle.jpg"  class="cards_min_img2" alt="" />
+
+                                    <div style="width: 210px;">                  
+                                        <p class="cards_min_nombre2">Chifle</p>
+
+                                        <div >
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">person</i>
+                                                <p class="card_prod_dest_texSec22">Cristhian briones</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">place</i>
+                                                <p class="card_prod_dest_texSec22">Esmeraldas</p>
+                                            </div>
+                                        </div>
+                                        <div class="concardsPeditsSec" style="width: 100%; ">
+                                            <div class="concardsPeditsSec" style="margin-right: 40px;">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                                <p class="card_prod_dest_texSec22">22:20</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">calendar_today</i>
+                                                <p class="card_prod_dest_texSec22">03/09/2020</p>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%;display: flex; justify-items: flex-end;">
+                                            <button class="cards_min_btn" style="width: 105px; margin: auto; margin-top: 8px; padding: 3px;"><i class="material-icons " style="font-size: 15px;color: #ffff; margin-right: 5px; margin-left: 5px; ">send</i>Entregar</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="cards_min2">
+
+                                    <img src="img/coca_cola_personal.jpg"  class="cards_min_img2" alt="" />
+
+                                    <div style="width: 210px;">                  
+                                        <p class="cards_min_nombre2">Coca cola personal</p>
+
+                                        <div >
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">person</i>
+                                                <p class="card_prod_dest_texSec22">Cristhian briones</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">place</i>
+                                                <p class="card_prod_dest_texSec22">Esmeraldas</p>
+                                            </div>
+                                        </div>
+                                        <div class="concardsPeditsSec" style="width: 100%; ">
+                                            <div class="concardsPeditsSec" style="margin-right: 40px;">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                                <p class="card_prod_dest_texSec22">22:20</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">calendar_today</i>
+                                                <p class="card_prod_dest_texSec22">03/09/2020</p>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%;display: flex; justify-items: flex-end;">
+                                            <button class="cards_min_btn" style="width: 105px; margin: auto; margin-top: 8px; padding: 3px;"><i class="material-icons " style="font-size: 15px;color: #ffff; margin-right: 5px; margin-left: 5px; ">send</i>Entregar</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="divTab">
+                            <div class="contcardsPedits">
+
+                                <div class="cards_min2">
+
+                                    <img src="img/combo_completo.jpg"  class="cards_min_img2" alt="" />
+
+                                    <div style="width: 210px;">                  
+                                        <p class="cards_min_nombre2">Combo completo</p>
+
+                                        <div >
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">person</i>
+                                                <p class="card_prod_dest_texSec22">Cristhian briones</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">place</i>
+                                                <p class="card_prod_dest_texSec22">Esmeraldas</p>
+                                            </div>
+                                        </div>
+                                        <div class="concardsPeditsSec" style="width: 100%; ">
+                                            <div class="concardsPeditsSec" style="margin-right: 40px;">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                                <p class="card_prod_dest_texSec22">22:20</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">calendar_today</i>
+                                                <p class="card_prod_dest_texSec22">03/09/2020</p>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%;display: flex; justify-items: flex-end;">
+                                            <button class="cards_min_btn" style="width: 105px; margin: auto; margin-top: 8px; padding: 3px;"><i class="material-icons " style="font-size: 15px;color: #ffff; margin-right: 5px; margin-left: 5px; ">send</i>Entregar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cards_min2">
+
+                                    <img src="img/combo_sencillo.jpg"  class="cards_min_img2" alt="" />
+
+                                    <div style="width: 210px;">                  
+                                        <p class="cards_min_nombre2">Combo sencillo</p>
+
+                                        <div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">person</i>
+                                                <p class="card_prod_dest_texSec22">Cristhian briones</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">place</i>
+                                                <p class="card_prod_dest_texSec22">Esmeraldas</p>
+                                            </div>
+                                        </div>
+                                        <div class="concardsPeditsSec" style="width: 100%; ">
+                                            <div class="concardsPeditsSec" style="margin-right: 40px;">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                                <p class="card_prod_dest_texSec22">22:20</p>
+                                            </div>
+                                            <div class="concardsPeditsSec">
+                                                <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-left: 10px;">calendar_today</i>
+                                                <p class="card_prod_dest_texSec22">03/09/2020</p>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%;display: flex; justify-items: flex-end;">
+                                            <button class="cards_min_btn" style="width: 105px; margin: auto; margin-top: 8px; padding: 3px;"><i class="material-icons " style="font-size: 15px;color: #ffff; margin-right: 5px; margin-left: 5px; ">send</i>Entregar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 </div>
+             </div>
+         
+            <script type="text/javascript" src="resources/js/refe.js"></script>
+    </h:body>
+</html>
+

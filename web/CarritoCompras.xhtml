@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <link rel="stylesheet" href="resources/css/estilos.css"></link>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet"/>
+
+        <title>Carrito de compras</title>
+    </h:head>
+    <h:body style=" background-color: #F7F7F7;"> 
+        <div class="nav_header" >
+            <div class="nav_header_logo">
+                <div>
+                    <span class="material-icons icon_logo" >shopping_cart</span>
+                </div>
+                <div>
+                    <t3 style="font-weight: 600; color: #707070">LOGO</t3>
+                </div>
+
+            </div>
+            <div class="nav_header_busqueda_princ">
+                <div class="nav_header_busqueda">
+                    <input class="nav_header_busq_text" type="text" placeholder="Buscar.."/>
+                    <span class="material-icons nav_header_busq_icon">search</span>
+                </div>
+                <div class="nav_header_busq_cart_cont">
+                    <h:form id="frmcant">
+                        <p class="item_num_cart" style="padding-left: 5px !important;">#{mostrarCarrito.cantidaditems}</p>
+                    </h:form>
+                    <a href="#" id="Add2cart"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">shopping_cart</i>
+                    </a>
+
+                    <a href="CarritoCompras.xhtml" style="text-decoration: none;"><label for="Add2cart" class="nav_header_busq_cart_cont_lbl">Mi carrito</label></a> 
+                </div>
+
+            </div>
+
+            <div class="nav_header_submenu">
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_home"><i class="material-icons nav_header_busq_cart_cont_icon selected_item" style="font-size: 25px;">home</i>
+                    </a>
+                    <label for="nav_head_prim_itm_home" class="nav_header_busq_cart_cont_lbl selected_item">Inicio</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">favorite</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Favoritos</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">style</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Mis compras</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">perm_identity</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Usuario</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="prinplbRes" >   
+            <div class="prinplbRes_sec" >
+                <div class="prinplbRes_tit">
+                    <div class="prinplbRes_tit_ci"><span class="material-icons">person_add</span></div>
+                    <div class="prinplbRes_tit_cont">MI CARRITO DE COMPRAS</div>
+                </div>
+
+
+                <div style="width: 70%; display: flex;">
+                    <div>
+                        <h:form id="formkart">
+                            <ui:repeat var="p" value="#{mostrarCarrito.listacarrito}" >
+                                <div class="cards_minCart">
+
+                                    <img src="#{p.imagenP}"  class="cards_min_imgCart" alt="" />
+
+                                    <div style="display: flex;">
+                                        <div class="contCartC">
+                                            <p class="cards_min_nombreCart">#{p.nombreP}</p>
+                                            <p class="card_prod_dest_texSec22">#{p.restauranteP}</p>
+                                        </div>
+                                    </div>
+                                    <div class="contCartC">
+                                        <div class="concardsPeditsSec">
+                                            <i class="material-icons " style="font-size: 15px; color:#BF0A19; margin-bottom: 0;">attach_money</i>
+                                            <p class="card_prod_dest_texSec22">#{p.precioP}</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin: auto;color: #707070; margin-left: 0px; margin-right: 10px;">X</p>
+                                    <div class="contCartC">
+                                        <div class="concardsPeditsSec">
+                                            <h:commandButton class="btnCantCart" value="-" >
+                                                <f:setPropertyActionListener value="#{p}" target="#{mostrarCarrito.conCartless}"></f:setPropertyActionListener>
+                                                <p:ajax update="formkart for2"></p:ajax>
+                                            </h:commandButton>
+
+                                            <!-- <button class="btnCantCart"> <i class="material-icons " style="font-size: 15px; color:#ffffff; margin-top: 1.5px;margin-left: -3px;">add</i></button>
+                                          <p class="card_prod_dest_texSec222">2</p>-->
+                                            <p:inputNumber styleClass="card_prod_dest_texSec222" decimalPlaces="0" value="#{p.cantidad}" >
+                                                <p:ajax event="keyup" listener="#{p.cantidad}"></p:ajax>
+                                                <p:ajax event="keyup" listener="#{p.subtotal}"></p:ajax>
+                                                <p:ajax event="keyup" listener="#{mostrarCarrito.total}"></p:ajax>
+
+                                            </p:inputNumber>
+                                            <h:commandButton class="btnCantCart" value="+" >
+                                                <f:setPropertyActionListener value="#{p}" target="#{mostrarCarrito.conCart}"></f:setPropertyActionListener>
+                                                <p:ajax update="formkart for2"></p:ajax>
+                                            </h:commandButton>
+
+
+
+
+
+                                            <!-- <button class="btnCantCart"> <i class="material-icons " style="font-size: 15px; color:#ffffff; margin-top: 1.5px;margin-left: -3px;">remove</i></button>-->
+                                        </div>
+                                    </div>
+                                    <p style="margin: auto;color: #707070; margin-left: 0px; margin-right: 10px;">=</p>
+
+                                    <p:inputNumber styleClass="card_prod_dest_texSec2222"  placeholder="#{p.precioP}"  value="#{p.subtotal}" >
+                                    </p:inputNumber>
+
+                                    <h:commandButton class="btnCantCart2" value="X" >
+                                        <f:setPropertyActionListener value="#{p}" target="#{mostrarCarrito.conCartCl}"></f:setPropertyActionListener>
+                                        <p:ajax update="formkart for2 frmcant"></p:ajax>
+                                    </h:commandButton>
+                                </div>
+                            </ui:repeat>
+                        </h:form>
+                    </div> 
+                    <div style="width: 30%;">
+                        <h:form id="for2">
+                            <div class="cards_minCart2">
+
+                                <div style="display: flex; justify-content: space-between;">
+                                    <p class="carttotal" style="color:#262626;">Total:</p>
+                                    <div class="carttotal" style="margin-left: 150px; font-style: italic; display: flex;" >$<input type="number" id="monto"  onchange="Pay()" disabled="true" value="#{mostrarCarrito.total}" class="cartvaluemont" /></div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="cards_minCart2">
+
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span class="contInpT_img material-icons">location_on</span>
+                                    <p:commandButton class="contInpT_txt btn" style="background-color: #ffffff" value="Seleccione su ubicación" type="button" onclick="PF('dlg2').show();" />
+
+                                </div>
+
+
+
+                            </div>
+                        </h:form>
+                        <div class="cards_minCart2">
+                            <div id="paypal-button-container" class="wrty"></div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <h:form prependId="false">
+            <p:dialog header="Basic Dialog" widgetVar="dlg2" class="popup" height="auto">
+
+                <p:growl id="messages" showDetail="true" />
+
+                <p:gmap id="gmap" center="#{mostrarCarrito.center_mapa}" zoom="13" type="ROADTRIP" style="width:650px;height:400px"
+                        model="#{addMarkersView.emptyModel}" onPointClick="handlePointClick(event);" widgetVar="map" />
+               
+                <h:inputHidden id="lat" value="#{mostrarCarrito.lat}" />
+                    <h:inputHidden id="lng" value="#{mostrarCarrito.lng}" />
+
+                    <p:commandButton id="guardarbd" style="visibility: hidden;"  actionListener="#{mostrarCarrito.registrarPago()}"></p:commandButton>
+            
+                <p:dialog widgetVar="dlg" showEffect="fade">
+                    
+                        <h:panelGrid columns="2">
+                            <f:facet name="footer">
+
+                                <p:commandButton value="Cancel" onclick="return cancel()" />
+                            </f:facet>
+                        </h:panelGrid>
+
+
+                
+                </p:dialog>
+
+            </p:dialog>
+</h:form>
+
+            <script
+                src="https://www.paypal.com/sdk/js?client-id=AYkI84ClZeHfKRdIGWY8gv1xMi0936vz9bHWKac1yB2h76sVqTsVjk_whwuidBNNSgLnVU2dGTbBkjm2">
+            </script>
+            <script type="text/javascript">
+                var currentMarker = null;
+
+                function handlePointClick(event) {
+                    if (currentMarker === null) {
+                        document.getElementById('lat').value = event.latLng.lat();
+                        document.getElementById('lng').value = event.latLng.lng();
+
+                        currentMarker = new google.maps.Marker({
+                            position: new google.maps.LatLng(event.latLng.lat(), event.latLng.lng())
+                        });
+
+                        PF('map').addOverlay(currentMarker);
+
+                    }
+                }
+
+                function markerAddComplete() {
+                    var title = document.getElementById('title');
+                    currentMarker.setTitle(title.value);
+                    title.value = "";
+
+                    currentMarker = null;
+                    PF('dlg').hide();
+                }
+
+
+                function cancel() {
+                    PF('dlg').hide();
+                    currentMarker.setMap(null);
+                    currentMarker = null;
+
+                    return false;
+                }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5MkIB5lNnQH1kC1tZ3ATeEsv7z66moKs"></script>
+
+            <script type="text/javascript" src="resources/js/pagos.js"></script>
+    </h:body>
+</html>
+

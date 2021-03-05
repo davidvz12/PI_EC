@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <title>Facelet Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet"/>
+    </head>
+    <body style=" background-color: #F7F7F7;">
+
+
+        <div class="nav_header" >
+            <div class="nav_header_logo">
+                <div>
+                    <span class="material-icons icon_logo" >shopping_cart</span>
+                </div>
+                <div>
+                    <t3 style="font-weight: 600; color: #707070">LOGO</t3>
+                </div>
+
+            </div>
+            <div class="nav_header_busqueda_princ">
+                <div class="nav_header_busqueda">
+                    <input class="nav_header_busq_text" type="text" placeholder="Buscar.."/>
+                    <span class="material-icons nav_header_busq_icon">search</span>
+                </div>
+                <div class="nav_header_busq_cart_cont">
+                    <p class="item_num_cart">9+</p>
+                    <a href="#" id="Add2cart"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">shopping_cart</i>
+                    </a>
+
+                    <label for="Add2cart" class="nav_header_busq_cart_cont_lbl">Mi carrito</label>
+                </div>
+
+            </div>
+
+            <div class="nav_header_submenu">
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_home"><i class="material-icons nav_header_busq_cart_cont_icon selected_item" style="font-size: 25px;">home</i>
+                    </a>
+                    <label for="nav_head_prim_itm_home" class="nav_header_busq_cart_cont_lbl selected_item">Inicio</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">favorite</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Favoritos</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">style</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Mis compras</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">perm_identity</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Usuario</label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ui:insert name="contenido">
+            
+            </ui:insert>
+        </div>
+         
+     </body>
+</html>

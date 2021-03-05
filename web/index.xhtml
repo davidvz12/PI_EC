@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- <h:outputStylesheet name="estilos.css"/>
+        
+        <h:outputStylesheet name="./resources/css/estilos.css" library="css" />-->
+        <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet"/>
+
+    </h:head>
+    <h:body style=" background-color: #ffff;">
+
+
+        <div class="nav_header" >
+            <div class="nav_header_logo">
+                <div>
+                    <span class="material-icons icon_logo" >shopping_cart</span>
+                </div>
+                <div>
+                    <t3 style="font-weight: 600; color: #707070">LOGO</t3>
+                </div>
+
+            </div>
+            <div class="nav_header_busqueda_princ">
+                <div class="nav_header_busqueda">
+                    <input class="nav_header_busq_text" type="text" placeholder="Buscar.."/>
+                    <span class="material-icons nav_header_busq_icon">search</span>
+                </div>
+                <div class="nav_header_busq_cart_cont">
+                    <p class="item_num_cart">9+</p>
+                    <a href="#" id="Add2cart"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">shopping_cart</i>
+                    </a>
+
+                    <label for="Add2cart" class="nav_header_busq_cart_cont_lbl">Mi carrito</label>
+                </div>
+
+            </div>
+
+            <div class="nav_header_submenu">
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_home"><i class="material-icons nav_header_busq_cart_cont_icon selected_item" style="font-size: 25px;">home</i>
+                    </a>
+                    <label for="nav_head_prim_itm_home" class="nav_header_busq_cart_cont_lbl selected_item">Inicio</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">favorite</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Favoritos</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">style</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Mis compras</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">perm_identity</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Usuario</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="principalcm" style=" background: url(#{resource['Imagenes/fondo.png']});  background-repeat: no-repeat;  background-attachment: fixed; 
+             z-index: 0; " >   
+            <div class="principal_princ">
+
+
+                <ui:repeat var="i" value="#{catalogo.imagen}">
+                    <div class="card_prod_dest">
+                        <h:graphicImage value="#{catalogo.imagen}" class="card_prod_dest_img"></h:graphicImage>
+
+                        <div> 
+                            <h:outputLabel class="card_prod_dest_titulo" value="#{catalogo.nombre}"></h:outputLabel>
+                            <div class="card_prod_dest_sec">
+
+                                <h:outputLabel class="card_prod_dest_tipo_item" value="#{catalogo.tipo}"></h:outputLabel>
+
+                                <div>
+                                    <i class="material-icons " style="font-size: 20px; color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star_half</i>
+                                </div>
+                            </div>
+
+                            <hr style=" border-top: 2px  rgb(217, 174, 138);"></hr>
+                            <h:outputLabel class="card_prod_dest_parrafo" value="#{catalogo.descripcion}"></h:outputLabel>
+
+                            <div class="card_prod_dest_sec2_prin">
+                                <div class="card_prod_dest_sec2">
+                                    <i class="material-icons " style="font-size: 25px; color:#BF0A19;">location_on</i>
+
+                                    <h:outputLabel class="card_prod_dest_texSec" value="#{catalogo.direccion}"></h:outputLabel>                                  
+                                    <i class="material-icons " style="font-size: 25px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                    <p class="card_prod_dest_texSec2">Abierto</p>
+                                    <p class="card_prod_dest_texSec">Horario de cierre 23:00</p> 
+                                </div>
+                                <button class="card_prod_dest_btn">VER MENÚ</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </ui:repeat>
+
+
+                <div>
+                    <div>
+                        <div style="display: flex;">
+                            <button class="card_prod_dest_tipo_itemSec" ><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Populares</button>
+                        </div>
+                        <div class="cont_cards_min">
+                            <ui:repeat var="p" value="#{catalogo.imagenes}">
+                                <div class="cards_min">
+                                    <h:graphicImage value="#{p.foto}" class="card_prod_dest_img"></h:graphicImage>
+
+                                    <h:outputLabel class="cards_min_nombre" value="#{p.nombre}" ></h:outputLabel>
+                                    <h:outputLabel class="cards_min_rest" value="#{p.descripcion}" ></h:outputLabel>
+                                    <button class="cards_min_btn"><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Ordenar</button>
+                                </div>
+                            </ui:repeat>    
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div>
+                        <div class="cont_cards_min" >
+                            <div class="cards_min">
+                                <img src="resources/Imagenes/parrillada.jpg"  class="cards_min_img" alt=""/>
+                                <p class="cards_min_nombre">Sopa de pato</p>
+                                <p class="cards_min_rest">Restaurante la española</p>
+                                <button class="cards_min_btn"><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Ordenar</button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div>
+                        <div class="cont_cards_min" >
+                            <div class="cards_min">
+                                <img src="resources/Imagenes/parrillada.jpg"  class="cards_min_img" alt=""/>
+                                <p class="cards_min_nombre">Sopa de pato</p>
+                                <p class="cards_min_rest">Restaurante la española</p>
+                                <button class="cards_min_btn"><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Ordenar</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        https://foodi-f2372.firebaseio.com/
+        <script src="/__/firebase/6.2.0/firebase-app.js"></script>
+        <script src="/__/firebase/6.2.0/firebase-auth.js"></script>
+        <script src="/__/firebase/6.2.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+    </h:body>
+</html>
+

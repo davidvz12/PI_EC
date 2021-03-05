@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/template/Encabezado.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="contenido">
+        <h:head>
+            <title>Registrar Producto</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                  rel="stylesheet"/>
+
+        </h:head>
+        <h:body style=" background-color: #F7F7F7;">
+            <div class="prinplbRes" >   
+                <div class="prinplbRes_sec" >
+                    <div class="prinplbRes_tit">
+                        <div class="prinplbRes_tit_ci"><span class="material-icons">person_add</span></div>
+                        <div class="prinplbRes_tit_cont">REGISTRAR NUEVO CLIENTE</div>
+                    </div>
+
+
+
+
+
+
+                    <h:form>
+                        <div class="contPrinFrm" style="margin-top: 10px;">
+                            <div class="contPrinFrm_Sec1">
+                                <div class="contPrinFrm_Sec1_in">
+
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Nombre</label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">perm_identity</span>
+                                            
+                                            
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.nombre}"></h:inputText>
+                
+                                        </div> 
+                                    </div>
+
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Apellido</label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">perm_identity</span>
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.apellido}"></h:inputText>
+
+                                        </div> 
+                                    </div>
+
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Teléfono</label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">phone</span>
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.telefono}"></h:inputText>
+                                        </div> 
+                                    </div>
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Correo</label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">alternate_email</span>
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.correo}"></h:inputText>
+                                        </div> 
+                                    </div>
+
+                                </div>
+
+                                <div class="contPrinFrm_Sec1_in">
+
+
+
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Ciudad</label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">location_city</span>
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.ciudad}"></h:inputText>
+
+                                        </div> 
+                                    </div>
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Sector</label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">near_me
+                                            </span>
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.sector}"></h:inputText>
+
+                                        </div> 
+                                    </div>
+
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Calle principal </label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">edit_road
+                                            </span>
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.calle_principal}"></h:inputText>
+                                        </div> 
+                                    </div>
+
+                                    <div class="contInpT">
+                                        <label class="contInpT_lbl" for="txtRNombre" >Referencia</label>
+                                        <div class="contInpT_Sec2">
+                                            <span class="contInpT_img material-icons">my_location</span>
+                                            <h:inputText class="contInpT_txt" required="true" value="#{registrarUsuario.referencia}"></h:inputText>
+                                        </div> 
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <h:commandButton class="card_prod_dest_btnRes" value="Guardar"  actionListener="#{registrarUsuario.guardar()}"></h:commandButton>
+                        </div>
+                    </h:form>
+
+                </div>
+
+            </div>
+        </h:body>
+    </ui:define>
+</ui:composition>    
+

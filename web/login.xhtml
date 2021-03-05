@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet"/>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+        <div class="logprincon"  >   
+
+            <div class="logprinconSec2Sub1">
+                <div class="logprinconSec2Sub1S">
+                    <img src="resources/Imagenes/foodi_logo.png" class="Sec2Sub1Icon" alt=""/>
+                    <a href="#" class="LogaRef">Iniciar Sesión</a>
+                    <a href="#" class="LogaRef">Registrarse</a>
+                    <a href="#" class="LogaRef">Acerca de</a>
+                </div>  
+                <div>
+                    <img src="resources/Imagenes/Grupo%20217.png" class="Sec2Sub1IconP" alt=""/>
+                </div>
+                <div style="margin-top: -70px;">
+                    <div class="card_prod_dest_tipo_itemSecLog" ><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">notes</i>Notas de la versión</div>
+                    <div style="display: flex; margin-top: 40px; ">
+                        <div style="text-align: center; justify-items: center;margin-right: 40px; ">
+                            <img src="resources/Imagenes/foodi_logo.png" class="Sec2Sub1Icon" alt=""/>
+                            <p class="LogaRef2">Ordena a domicilio</p>
+                        </div>
+                        <div style="text-align: center; justify-items: center;margin-right: 40px; ">
+                            <img src="resources/Imagenes/foodi_logo.png" class="Sec2Sub1Icon" alt=""/>
+                            <p class="LogaRef2">Ordena a domicilio</p>
+                        </div>
+                        <div style="text-align: center; justify-items: center;margin-right: 40px; ">
+                            <img src="resources/Imagenes/foodi_logo.png" class="Sec2Sub1Icon" alt=""/>
+                            <p class="LogaRef2">Ordena a domicilio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h:form>
+                <div class="logprinconSec2Sub2" style=" background-image: url(resources/Imagenes/Grupo%20226.png);">
+                    <div style=" text-align: center;" >
+                        <img src="resources/Imagenes/foodi_letras.png" class="logprinconSec2ImgF" alt=""/>
+                    </div>    
+
+                    <div class="contInpTInit" style="margin-left: 40px; margin-right: 40px;">
+                        <label class="contInpT_lbl" for="txtRNombre" >Usuario</label>
+                        <div class="contInpT_Sec2" >
+                            <span class="contInpT_img material-icons">person</span>
+                            <h:inputText  id="txtRNombre" class="contInpT_txt"   required="true" value="#{ingresarLogin.usu}"/>
+                        </div> 
+                    </div>
+
+                    <div class="contInpTInit" style="margin-left: 40px; margin-right: 40px;">
+                        <label class="contInpT_lbl" for="txtRContra" >Clave</label>
+                        <div class="contInpT_Sec2">
+                            <span class="contInpT_img material-icons">vpn_key</span>
+                            <h:inputSecret  class="contInpT_txt" id="txtRContra" required="true" value="#{ingresarLogin.contra}"/>
+                        </div> 
+                    </div>
+                    <h:commandButton class="card_prod_dest_btn" style="margin: auto; margin-top: 20px;" value="INICIAR SESIÓN" action="#{ingresarLogin.conectar()}"/>
+                    <br/> 
+                    <h:messages style="margin-left: 100px;" errorStyle="color: red" infoStyle="color: green" globalOnly="true"/>
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      template="/template/Encabezado.xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="contenido">
+    <h:head>
+        <title>Registrar Producto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet"/>
+
+    </h:head>
+    <h:body style=" background-color: #F7F7F7;">
+        <div class="prinplbRes" >   
+            <div class="prinplbRes_sec" >
+                <div class="prinplbRes_tit">
+                    <div class="prinplbRes_tit_ci"><span class="material-icons">new_releases</span></div>
+                    <div class="prinplbRes_tit_cont">NUEVO PRODUCTO</div>
+                </div>
+                <div class="contPrinFrm">
+                    <div class="contPrinFrm_Sec1">
+                        <div class="contPrinFrm_Sec1_in">
+
+                            <div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >Nombre</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">local_offer</span>
+                                    <input class="contInpT_txt" type="text" id="txtRNombre" placeholder="Ingrese un nombre"/>
+                                </div> 
+                            </div>
+
+                            <div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >Tipo producto</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">fastfood</span>
+                                    <select class="select-css">
+                                        <option>Selecciona una opción</option>
+                                        <option>Lunes</option>
+                                        <option>Martes</option>
+                                        <option>Miércoles</option>
+                                        <option>Jueves</option>   <option>Viernes</option>
+                                    </select>
+
+                                </div> 
+                            </div>
+
+                            <div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >Estado</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">bookmarks</span>
+                                    <select class="select-css">
+                                        <option>Selecciona una opción</option>
+                                        <option>Lunes</option>
+                                        <option>Martes</option>
+                                        <option>Miércoles</option>
+                                        <option>Jueves</option>   <option>Viernes</option>
+                                    </select>
+                                </div> 
+                            </div><div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >Precio</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">attach_money</span>
+                                    <input class="contInpT_txt" type="text" id="txtRNombre" placeholder="0.00"/>
+                                </div> 
+                            </div>
+
+                        </div>
+
+                        <div class="contPrinFrm_Sec1_in">
+                            <div class="contPrinFrmImgCargCon" >
+                                <img class="contPrinFrmImgCarg" src="resources/Imagenes/parrillada.jpg" alt=""/>
+                            </div>
+
+                            <div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >Foto</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">camera_alt</span>
+                                    <label class="custom-file-upload">
+                                        <input type="file"/>
+                                        Seleccione un archivo
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contInpT" >
+                        <label class="contInpT_lbl" for="txtRNombre" >Descripción</label>
+                        <div class="contInpT_Sec2" style="height: 90px;" >
+                            <span class="contInpT_img material-icons" style="margin-top: -40px;">description</span>
+                            <textarea class="contInpT_txt" style="height: 75px; width: 95%; margin-top: 10px;" id="txtRNombre" placeholder="Ingrese la descripci'on del producto"></textarea> 
+                        </div>
+
+                    </div>
+
+                    <button class="card_prod_dest_btnRes">GUARDAR</button>
+                </div>
+            </div>
+        </div>
+
+    </h:body>
+  </ui:define>
+</ui:composition>    
+        

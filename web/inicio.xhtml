@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      template="/template/Encabezado.xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+ <ui:define name="contenido">
+    <h:head>
+        <title>Facelet Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet"/>
+
+    </h:head>
+    <h:body style=" background-color: #ffff;">
+        <div class="principalcm" style=" background: url(#{resource['Imagenes/fondo.png']});  background-repeat: no-repeat;  background-attachment: fixed; 
+             z-index: 0; width: 100%; " >   
+            <div class="principal_princ">
+
+
+              <ui:repeat var="i" value="#{catalogo.imagen}">
+                  <div class="card_prod_dest" style="vertical-align: central;">
+                        <h:graphicImage value="#{catalogo.imagen}" styleClass="card_prod_dest_img" style="  width: 750px;height: 250px;border-radius: 50px; margin-right: 40px;" ></h:graphicImage>
+
+                        <div style="width: 100%; margin-top: 20px;"> 
+                            <h:outputLabel class="card_prod_dest_titulo" value="#{catalogo.nombre}"></h:outputLabel>
+                            <div class="card_prod_dest_sec">
+
+                                <h:outputLabel class="card_prod_dest_tipo_item" value="#{catalogo.tipo}" style="text-transform: capitalize;"></h:outputLabel>
+
+                                <div>
+                                    <i class="material-icons " style="font-size: 20px; color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star</i>
+                                    <i class="material-icons " style="font-size: 20px;color: #FF9235;">star_half</i>
+                                </div>
+                            </div>
+
+                            <hr style=" border-top: 2px  rgb(217, 174, 138);"></hr>
+                         
+                            <p class="card_prod_dest_parrafo" style="width: 100%; min-height: 50px;">#{catalogo.descripcion}</p>
+                            <div class="card_prod_dest_sec2_prin">
+                                <div class="card_prod_dest_sec2">
+                                    <i class="material-icons " style="font-size: 25px; color:#BF0A19;">location_on</i>
+
+                                    <h:outputLabel class="card_prod_dest_texSec" value="#{catalogo.direccion}"></h:outputLabel>                                  
+                                    <i class="material-icons " style="font-size: 25px; color:#BF0A19; margin-left: 10px;">access_time</i>
+                                    <p class="card_prod_dest_texSec2">Abierto</p>
+                                    <p class="card_prod_dest_texSec">Horario de cierre 23:00</p> 
+                                </div>
+                                <button class="card_prod_dest_btn" style=" outline:none; cursor: grabbing;">VER MENÚ</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </ui:repeat>
+
+
+                <div>
+                    <div>
+                        <div style="display: flex;">
+                            <button class="card_prod_dest_tipo_itemSec" ><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Populares</button>
+                        </div>
+                        <div class="cont_cards_min">
+                        <ui:repeat var="p" value="#{catalogo.imagenes}">
+                                <div class="cards_min">
+                                     <img src="#{p.foto}"  class="cards_min_img" alt=""/>
+                                    <h:outputLabel class="cards_min_nombre"  value="#{p.nombre}" style=" width: 100%; text-align: center;"></h:outputLabel>
+                                    <h:outputLabel class="cards_min_rest" value="#{p.descripcion}" style="width: 100%; text-align: center;"></h:outputLabel>                      
+                                    <button class="cards_min_btn"><i class="material-icons " style="outline:none; cursor: pointer; font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Ordenar</button>
+                                </div>
+                            </ui:repeat>  
+                            
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div>
+                        <div class="cont_cards_min" >
+                            <div class="cards_min">
+                                <img src="resources/Imagenes/parrillada.jpg"  class="cards_min_img" alt=""/>
+                                <p class="cards_min_nombre">Sopa de pato</p>
+                                <p class="cards_min_rest">Restaurante la española</p>
+                                <button class="cards_min_btn"><i class="material-icons " style=" font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Ordenar</button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div>
+                        <div class="cont_cards_min" >
+                            <div class="cards_min">
+                                <img src="resources/Imagenes/parrillada.jpg"  class="cards_min_img" alt=""/>
+                                <p class="cards_min_nombre">Sopa de pato</p>
+                                <p class="cards_min_rest">Restaurante la española</p>
+                                <button class="cards_min_btn"><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Ordenar</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        https://foodi-f2372.firebaseio.com/
+        <script src="/__/firebase/6.2.0/firebase-app.js"></script>
+        <script src="/__/firebase/6.2.0/firebase-auth.js"></script>
+        <script src="/__/firebase/6.2.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+     </h:body>
+  </ui:define>
+</ui:composition>    
+

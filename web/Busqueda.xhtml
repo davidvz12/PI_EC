@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      template="/template/Encabezado.xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+  <ui:define name="contenido">
+    <h:head>
+        <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet"/>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div class="nav_header" >
+            <div class="nav_header_logo">
+                <div>
+                    <span class="material-icons icon_logo" >shopping_cart</span>
+                </div>
+                <div>
+                    <t3 style="font-weight: 600; color: #707070">LOGO</t3>
+                </div>
+
+            </div>
+            <div class="nav_header_busqueda_princ">
+                <div class="nav_header_busqueda">
+                    <input class="nav_header_busq_text" type="text" placeholder="Buscar.."/>
+                    <span class="material-icons nav_header_busq_icon">search</span>
+                </div>
+                <div class="nav_header_busq_cart_cont">
+                    <p class="item_num_cart">9+</p>
+                    <a href="#" id="Add2cart"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">shopping_cart</i>
+                    </a>
+
+                    <label for="Add2cart" class="nav_header_busq_cart_cont_lbl">Mi carrito</label>
+                </div>
+
+            </div>
+
+            <div class="nav_header_submenu">
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_home"><i class="material-icons nav_header_busq_cart_cont_icon selected_item" style="font-size: 25px;">home</i>
+                    </a>
+                    <label for="nav_head_prim_itm_home" class="nav_header_busq_cart_cont_lbl selected_item">Inicio</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">favorite</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Favoritos</label>
+                </div>
+                <div class="nav_header_busq_cart_cont_item">
+                    <a href="#" id="nav_head_prim_itm_star"><i class="material-icons nav_header_busq_cart_cont_icon" style="font-size: 25px;">style</i>
+                    </a>
+                    <label for="nav_head_prim_itm_star" class="nav_header_busq_cart_cont_lbl">Mis compras</label>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="principalcm" style=" background: url(#{resource['Imagenes/fondo.png']});  background-repeat: no-repeat;  background-attachment: fixed; 
+             z-index: 0; width: 100%; ">   
+            <div class="principal_princ">
+
+
+
+                <div>
+                    <div>
+                        <div style="display: flex;">
+                            <button class="card_prod_dest_tipo_itemSec" style="width: 210px;"><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">list</i>Resultados de búsqueda</button>
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+                    <div style="display: flex;  margin: auto; width: 80%;">
+                        <div class="conBusqFilt" style="max-width: 210px; min-width: 210px;">
+                            <p class="busqTeltFilt">Filtros</p>
+                            <div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >Tipo producto</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">fastfood</span>
+                                    <h:form>
+                                        <p:selectOneMenu class="select-css" value="#{producto.tipo_producto}" style="width:110px; font-size: 12px;" styleClass="form-control radius-none" >   
+                                            <f:selectItem itemLabel="Seleccionar" itemValue="" />
+                                            <f:selectItem itemLabel="Almuerzo" itemValue="1" />
+                                            <f:selectItem itemLabel="Merienda" itemValue="2" />
+                                            <f:selectItem itemLabel="Bebida" itemValue="3" />
+                                            <f:selectItem itemLabel="Acompañamiento" itemValue="4" />
+                                            <p:ajax update="filtrofoto"></p:ajax>
+                                        </p:selectOneMenu>
+                                    </h:form>
+                                </div> 
+
+                            </div>
+                            <div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >Ordenar por</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">leaderboard</span>
+                                    <select class="select-css" style="font-size: 12px;">
+                                        <option>Seleccionar</option>
+                                        <option>Lunes</option>
+                                        <option>Martes</option>
+                                        <option>Miércoles</option>
+                                        <option>Jueves</option>   <option>Viernes</option>
+                                    </select>
+
+                                </div> 
+                            </div>
+
+                            <div class="contInpT">
+                                <label class="contInpT_lbl" for="txtRNombre" >precio</label>
+                                <div class="contInpT_Sec2">
+                                    <span class="contInpT_img material-icons">attach_money</span>
+                                    
+                                    <h:form>
+                                        <p:selectOneMenu class="select-css" value="#{producto.precio}" style="width:110px; font-size: 12px;" styleClass="form-control radius-none" >   
+                                            <f:selectItem itemLabel="Seleccione uno" itemValue="" />
+                                            <f:selectItem itemLabel="Menor - Mayor" itemValue="asc" />
+                                            <f:selectItem itemLabel="Mayor - Menor" itemValue="desc" />
+                                            <p:ajax update="filtrofoto"></p:ajax>
+                                        </p:selectOneMenu>
+                                    </h:form>
+                       
+                                </div> 
+                            </div>
+
+                        </div>
+
+
+                        <h:form id="filtrofoto">
+                            <div>
+                                <div  class="cont_cards_min" style="display: flex; flex-wrap: wrap; width: 100%; margin-left: 0; min-width: 800px;" >
+                                    <ui:repeat var="p" value="#{producto.imagenes}">  
+                                        <div class="cards_min" style="margin-bottom: 20px;">                                        
+                                            <h:graphicImage class="cards_min_img" value="#{p.foto}"> </h:graphicImage>                                        
+                                            <p class="cards_min_nombre">#{p.descripcion}</p>
+                                            <p class="cards_min_rest">#{p.nombre}</p>                      
+                                            <button class="cards_min_btn"><i class="material-icons " style="font-size: 20px;color: #ffff; margin-right: 10px;">trending_up</i>Ordenar</button>
+                                        </div>
+                                    </ui:repeat>
+                                </div>
+                                <div style="display: flex;justify-content: flex-end; margin-right: -20px;">
+
+
+                                    <button class="BusFilBtn">
+                                        <span class="material-icons" style=" font-size: 30px; margin: auto;  cursor: pointer;">keyboard_arrow_left</span>
+                                    </button>
+                                    <button class="BusFilBtn"><p style="margin: auto; cursor: default;">1</p></button>
+                                    <button class="BusFilBtn">
+                                        <span class="material-icons" style=" font-size: 30px; margin: auto; cursor: pointer;">keyboard_arrow_right</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </h:form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </h:body>
+  </ui:define>
+</ui:composition>  
+
